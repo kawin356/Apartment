@@ -18,6 +18,7 @@ struct K {
         static let roomSetup = "goToRoomSetup"
         static let customerSetup = "goToCustomerSetup"
         static let toMain = "goToMain"
+        static let toSettingRoomAndCustomer = "settingRoomAndCustomer"
     }
     
     struct ReuseCell {
@@ -26,5 +27,6 @@ struct K {
         static let customercellNibName = "StartConfigCustomerCell"
         static let customerConfigReuseCell = "customerReusableCell"
         static let collectionReuseCell = "collectionReuseCell"
+        static let roomdetailReuseCell = "roomDetail"
     }
 }

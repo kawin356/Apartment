@@ -17,7 +17,14 @@ class BuildingSetupViewController: UIViewController {
     
     var buildingCurrent: Building?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+    }
+    
     @IBAction func nextButtonPressed(_ sender: UIButton) {
+        DataController.deleteEntity()
         let building = Building(context: DataController.shared.viewContext)
         guard let name = buildingNameTextField.text,
             let room = Int16(numberOfRoomsTextField.text!),
@@ -32,6 +39,7 @@ class BuildingSetupViewController: UIViewController {
         building.costwater = costwater
         buildingCurrent = building
         DataController.saveContext()
+        CurrentBuilding.building = building
         
         performSegue(withIdentifier: K.Segue.roomSetup, sender: nil)
     }

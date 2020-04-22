@@ -16,7 +16,7 @@ class MainRoomsCollectionView: UIViewController {
         super.viewDidLoad()
         guard let building = CurrentBuilding.building else { return }
         let predict = NSPredicate(format: "building == %@", building)
-        rooms = DataController.taskLoadData(type: Room.self, search: predict)
+        rooms = DataController.taskLoadData(type: Room.self, search: predict, sort: nil)
     }
 }
 

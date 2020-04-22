@@ -10,6 +10,8 @@ import UIKit
  
 class RoomAndCustomerSetupViewController: UITableViewController {
     
+    var room: Room? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,6 +19,30 @@ class RoomAndCustomerSetupViewController: UITableViewController {
         tableView.register(UINib(nibName: K.ReuseCell.customercellNibName, bundle: nil), forCellReuseIdentifier: K.ReuseCell.customerConfigReuseCell)
     }
     
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        let indexPath = IndexPath(row: 0, section: 0)
+        let row = tableView.cellForRow(at: indexPath) as! StartConfigRoomsCell
+        let room = Room(context: DataController.shared.viewContext)
+        room.roomnumber = row.roomNumberTextField.text
+        room.haveFurniture = row.haveFurnitureSwitch.isOn
+        room.haveair = row.haveAirconditionSwitch.isOn
+        room.roomcost = Double(Int(row.roomCostTextField.text!)!)
+        room.building = CurrentBuilding.building
+        DataController.saveContext()
+        
+        let indexPathCustomer = IndexPath(row: 0, section: 1)
+        let customer = Customer(context: DataController.shared.viewContext)
+        let rowCustomer = tableView.cellForRow(at: indexPathCustomer) as! StartConfigCustomerCell
+        if rowCustomer.reserveRoomSwitch.isOn {
+            customer.name = rowCustomer.nameTextField.text
+            customer.telephone = rowCustomer.telephoneTextField.text
+            customer.room = room
+        }
+        DataController.saveContext()
+        
+        navigationController?.popViewController(animated: true)
+        
+    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2

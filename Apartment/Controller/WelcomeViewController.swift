@@ -20,8 +20,8 @@ class WelcomeViewController: UIViewController {
     }
     
     func checkAlreadyCreateBuilding() {
-        let building = DataController.taskLoadData(type: Building.self, search: nil)
-        
+        let building = DataController.taskLoadData(type: Building.self, search: nil, sort: nil)
+        print("Building count \(building.count)")
         if building.count == 0 {
             print("Go To Create")
         } else {

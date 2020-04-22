@@ -21,7 +21,7 @@ class CustomerSetupViewController: UIViewController {
         tableView.register(UINib(nibName: K.ReuseCell.customercellNibName, bundle: nil), forCellReuseIdentifier: K.ReuseCell.customerConfigReuseCell)
         
         let predict = NSPredicate(format: "building == %@", building)
-        rooms = DataController.taskLoadData(type: Room.self, search: predict)
+        rooms = DataController.taskLoadData(type: Room.self, search: predict, sort: nil)
         
 //        let fetchRequest:NSFetchRequest<Room> = Room.fetchRequest()
 //        let predict = NSPredicate(format: "building == %@", building)
