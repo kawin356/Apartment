@@ -9,7 +9,39 @@
 import UIKit
 
 class BuildingSetupViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var buildingNameTextField: UITextField!
+    @IBOutlet weak var numberOfRoomsTextField: UITextField!
+    @IBOutlet weak var numberOfFloorsTextField: UITextField!
+    @IBOutlet weak var waterCostTextField: UITextField!
+    @IBOutlet weak var elecCostTextField: UITextField!
+    
+    var buildingCurrent: Building?
+    
+    @IBAction func nextButtonPressed(_ sender: UIButton) {
+        let building = Building(context: DataController.shared.viewContext)
+        guard let name = buildingNameTextField.text,
+            let room = Int16(numberOfRoomsTextField.text!),
+            let costelec = Int16(elecCostTextField.text!),
+            let costwater = Int16(waterCostTextField.text!) else {
+                print("error")
+                return
+        }
+        building.name = name
+        building.numberofrooms = room
+        building.costelec = costelec
+        building.costwater = costwater
+        buildingCurrent = building
+        DataController.saveContext()
+        
+        performSegue(withIdentifier: K.Segue.roomSetup, sender: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.Segue.roomSetup {
+            let viewController = segue.destination as! RoomSetupViewController
+            viewController.numberOfRoom = Int(numberOfRoomsTextField.text!)
+            viewController.building = buildingCurrent
+        }
+    }
+    
 }

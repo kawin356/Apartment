@@ -9,10 +9,20 @@
 import UIKit
 
 class StartConfigCustomerCell: UITableViewCell {
-
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var telephoneTextField: UITextField!
+    @IBOutlet weak var roomNumberLabel: UILabel!
+    @IBOutlet weak var reserveRoomSwitch: UISwitch!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    @IBAction func reserveRoomChanged(_ sender: UISwitch) {
+        nameTextField.isEnabled = sender.isOn
+        telephoneTextField.isEnabled = sender.isOn
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

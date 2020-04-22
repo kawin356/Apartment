@@ -9,8 +9,14 @@
 import Foundation
 
 struct K {
+    
+    struct StoryboardID {
+        static let main = "Main"
+        static let tabbarMain = "tabbarMain"
+    }
     struct Segue {
-        
+        static let roomSetup = "goToRoomSetup"
+        static let customerSetup = "goToCustomerSetup"
     }
     
     struct ReuseCell {
