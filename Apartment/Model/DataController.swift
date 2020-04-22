@@ -42,6 +42,22 @@ class DataController {
             }
         }
     }
+    
+    class func taskLoadData<T: NSManagedObject>(type: T.Type) -> [T] {
+        
+        let context = DataController.shared.viewContext
+           let request = T.fetchRequest()
+           do
+           {
+               let results = try context.fetch(request)
+            return results as! [T]
+           }
+           catch
+           {
+               print("Error with request: \(error)")
+              return []
+           }
+    }
 }
 
 

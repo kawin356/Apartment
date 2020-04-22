@@ -20,17 +20,17 @@ class CustomerSetupViewController: UIViewController {
         super.viewDidLoad()
         tableView.register(UINib(nibName: K.ReuseCell.customercellNibName, bundle: nil), forCellReuseIdentifier: K.ReuseCell.customerConfigReuseCell)
         
-        let fetchRequest:NSFetchRequest<Room> = Room.fetchRequest()
-        let predict = NSPredicate(format: "building == %@", building)
-        fetchRequest.predicate = predict
-        do {
-            rooms = try DataController.shared.viewContext.fetch(fetchRequest)
-            for room in rooms {
-                print(room.roomnumber)
-            }
-        } catch let error as NSError {
-          print("Could not fetch. \(error), \(error.userInfo)")
-        }
+//        let fetchRequest:NSFetchRequest<Room> = Room.fetchRequest()
+//        let predict = NSPredicate(format: "building == %@", building)
+//        fetchRequest.predicate = predict
+//        do {
+//            rooms = try DataController.shared.viewContext.fetch(fetchRequest)
+//            for room in rooms {
+//                print(room.roomnumber)
+//            }
+//        } catch let error as NSError {
+//          print("Could not fetch. \(error), \(error.userInfo)")
+//        }
     }
     
     @IBAction func saveCustomerButtonPressed(_ sender: UIButton) {
@@ -88,8 +88,8 @@ extension CustomerSetupViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.ReuseCell.customerConfigReuseCell, for: indexPath) as! StartConfigCustomerCell
         cell.roomNumberLabel.text = rooms[indexPath.row].roomnumber
-        cell.nameTextField.text = "Kitt\(rooms[indexPath.row].roomnumber)"
-        cell.telephoneTextField.text = "0191011910\(rooms[indexPath.row].roomnumber)"
+        cell.nameTextField.text = "Kitt\(rooms[indexPath.row].roomnumber ?? "00100")"
+        cell.telephoneTextField.text = "0191011910\(rooms[indexPath.row].roomnumber ?? "090009999")"
         return cell
     }
     

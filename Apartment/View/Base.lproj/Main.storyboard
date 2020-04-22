@@ -455,11 +455,11 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xn2-V7-lE4">
-                                <rect key="frame" x="109.5" y="763" width="195" height="45"/>
+                                <rect key="frame" x="132" y="763" width="150" height="45"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="195" id="9Vy-gd-9rM"/>
-                                    <constraint firstAttribute="height" constant="45" id="bqO-ex-XBb"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="3Dt-vS-h53"/>
+                                    <constraint firstAttribute="height" constant="45" id="eqV-Uy-s2v"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Finish">
@@ -472,11 +472,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="xn2-V7-lE4" firstAttribute="centerX" secondItem="hI4-Is-oui" secondAttribute="centerX" id="4va-Jf-MpJ"/>
+                            <constraint firstItem="xn2-V7-lE4" firstAttribute="bottom" secondItem="nM4-cL-iN8" secondAttribute="bottom" id="4zD-Be-CZi"/>
+                            <constraint firstItem="xn2-V7-lE4" firstAttribute="top" secondItem="kkq-eV-vYn" secondAttribute="bottom" constant="19" id="5Fb-z3-jg4"/>
+                            <constraint firstItem="xn2-V7-lE4" firstAttribute="centerX" secondItem="hI4-Is-oui" secondAttribute="centerX" id="7S9-Jq-RbQ"/>
                             <constraint firstItem="kkq-eV-vYn" firstAttribute="top" secondItem="hI4-Is-oui" secondAttribute="top" id="PRk-jK-9K0"/>
-                            <constraint firstItem="xn2-V7-lE4" firstAttribute="bottom" secondItem="nM4-cL-iN8" secondAttribute="bottom" id="bBX-01-oEa"/>
-                            <constraint firstItem="xn2-V7-lE4" firstAttribute="top" secondItem="kkq-eV-vYn" secondAttribute="bottom" constant="19" id="j8M-Oq-cAu"/>
-                            <constraint firstItem="xn2-V7-lE4" firstAttribute="top" secondItem="kkq-eV-vYn" secondAttribute="bottom" constant="19" id="jQe-ys-SXH"/>
                             <constraint firstItem="kkq-eV-vYn" firstAttribute="leading" secondItem="nM4-cL-iN8" secondAttribute="leading" id="jTv-Fy-Exm"/>
                             <constraint firstItem="kkq-eV-vYn" firstAttribute="trailing" secondItem="nM4-cL-iN8" secondAttribute="trailing" id="qM3-ZB-mfd"/>
                         </constraints>

@@ -21,20 +21,20 @@ class RoomSetupViewController: UIViewController {
         super.viewDidLoad()
         tableView.register(UINib(nibName: K.ReuseCell.roomcellNibName, bundle: nil), forCellReuseIdentifier: K.ReuseCell.roomConfigReuseCell)
         
-        let fetchRequest:NSFetchRequest<Building> = Building.fetchRequest()
+   //     let fetchRequest:NSFetchRequest<Building> = Building.fetchRequest()
         
-        do {
-            buil = try DataController.shared.viewContext.fetch(fetchRequest)
-            if let bu = buil {
-                for b in bu {
-                    print(b.name)
-                }
-            }
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
-        }
-        
-                
+//        do {
+//            buil = try DataController.shared.viewContext.fetch(fetchRequest)
+//            if let bu = buil {
+//                for b in bu {
+//                    print(b.name)
+//                }
+//            }
+//        } catch let error as NSError {
+//            print("Could not fetch. \(error), \(error.userInfo)")
+//        }
+//
+//
     }
     
     @IBAction func nextToCustomerSetup(_ sender: UIBarButtonItem) {
@@ -55,7 +55,6 @@ class RoomSetupViewController: UIViewController {
                 room.haveair = row.haveAirconditionSwitch.isOn
                 room.roomcost = Double(Int(row.roomCostTextField.text!)!)
                 room.building = building
-                print(room.roomnumber)
                 rooms?.append(room)
                 DataController.saveContext()
             }
