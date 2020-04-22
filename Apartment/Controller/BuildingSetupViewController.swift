@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BuildingSetupViewController.swift
 //  Apartment
 //
 //  Created by Kittikawin Sontinarakul on 22/4/2563 BE.
@@ -8,13 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class BuildingSetupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
-
