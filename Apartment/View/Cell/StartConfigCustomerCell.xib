@@ -31,7 +31,7 @@
                                             <action selector="reserveRoomChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="1iR-gu-a9H"/>
                                         </connections>
                                     </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3v-EM-wbB">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3v-EM-wbB">
                                         <rect key="frame" x="0.0" y="70" width="38" height="27"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="27" id="922-p6-ezP"/>
@@ -47,17 +47,17 @@
                                 <rect key="frame" x="96" y="0.0" width="339" height="97"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pf-Kn-EtY">
-                                        <rect key="frame" x="0.0" y="0.0" width="339" height="41"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="339" height="28"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JU8-La-p3u">
-                                                <rect key="frame" x="0.0" y="0.5" width="39" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.5" width="39" height="27"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="39" id="BJx-wN-jEi"/>
                                                     <constraint firstAttribute="height" constant="41" id="aXp-Qn-fyZ"/>
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KB3-9c-m79">
-                                                <rect key="frame" x="39" y="7" width="300" height="34"/>
+                                                <rect key="frame" x="39" y="-6" width="300" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="4TF-BY-xSX"/>
                                                     <constraint firstAttribute="width" constant="300" id="nHV-88-c1R"/>
@@ -68,17 +68,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="doJ-kZ-e4u">
-                                        <rect key="frame" x="0.0" y="71" width="339" height="26"/>
+                                        <rect key="frame" x="0.0" y="58" width="339" height="39"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Cnb-Pd-4Kv">
-                                                <rect key="frame" x="0.0" y="1.5" width="39" height="23.5"/>
+                                                <rect key="frame" x="0.0" y="1.5" width="39" height="36.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="39" id="8cE-PH-OTL"/>
                                                     <constraint firstAttribute="width" constant="39" id="plP-qP-cD7"/>
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telephone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="inX-p4-qui">
-                                                <rect key="frame" x="39" y="-8" width="300" height="34"/>
+                                                <rect key="frame" x="39" y="5" width="300" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="300" id="CDV-i4-TSF"/>
                                                     <constraint firstAttribute="height" constant="34" id="leM-MU-Qfc"/>

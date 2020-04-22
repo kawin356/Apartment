@@ -26,6 +26,7 @@
 		43B3D62E24501FDD00482614 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D62D24501FDD00482614 /* DataController.swift */; };
 		43B3D63024504BBF00482614 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D62F24504BBF00482614 /* WelcomeViewController.swift */; };
 		43B3D632245071A000482614 /* CurrentBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D631245071A000482614 /* CurrentBuilding.swift */; };
+		43B3D63424508C8F00482614 /* RoomAndCustomerSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D63324508C8F00482614 /* RoomAndCustomerSetupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		43B3D62D24501FDD00482614 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		43B3D62F24504BBF00482614 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		43B3D631245071A000482614 /* CurrentBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentBuilding.swift; sourceTree = "<group>"; };
+		43B3D63324508C8F00482614 /* RoomAndCustomerSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomAndCustomerSetupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				43B3D62B24501ADC00482614 /* RoomSetupViewController.swift */,
 				43B3D6272450194700482614 /* CustomerSetupViewController.swift */,
 				43B3D62F24504BBF00482614 /* WelcomeViewController.swift */,
+				43B3D63324508C8F00482614 /* RoomAndCustomerSetupViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				43B3D61924500E2800482614 /* MainRoomsCollectionView.swift in Sources */,
 				43B3D62E24501FDD00482614 /* DataController.swift in Sources */,
 				43B3D62C24501ADC00482614 /* RoomSetupViewController.swift in Sources */,
+				43B3D63424508C8F00482614 /* RoomAndCustomerSetupViewController.swift in Sources */,
 				43B3D6222450163500482614 /* BuildingSetupViewController.swift in Sources */,
 				43B3D5FC244FFD8200482614 /* AppDelegate.swift in Sources */,
 				43B3D61B24500F1D00482614 /* MainRoomsCollectionViewCell.swift in Sources */,
