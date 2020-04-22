@@ -27,6 +27,9 @@
 		43B3D63024504BBF00482614 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D62F24504BBF00482614 /* WelcomeViewController.swift */; };
 		43B3D632245071A000482614 /* CurrentBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D631245071A000482614 /* CurrentBuilding.swift */; };
 		43B3D63424508C8F00482614 /* RoomAndCustomerSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D63324508C8F00482614 /* RoomAndCustomerSetupViewController.swift */; };
+		43B3D6372450A7C100482614 /* CustomerDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D6352450A7C100482614 /* CustomerDetailCell.swift */; };
+		43B3D6382450A7C100482614 /* CustomerDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43B3D6362450A7C100482614 /* CustomerDetailCell.xib */; };
+		43B3D63A2450AA9F00482614 /* MainRoomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D6392450AA9F00482614 /* MainRoomTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		43B3D62F24504BBF00482614 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		43B3D631245071A000482614 /* CurrentBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentBuilding.swift; sourceTree = "<group>"; };
 		43B3D63324508C8F00482614 /* RoomAndCustomerSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomAndCustomerSetupViewController.swift; sourceTree = "<group>"; };
+		43B3D6352450A7C100482614 /* CustomerDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailCell.swift; sourceTree = "<group>"; };
+		43B3D6362450A7C100482614 /* CustomerDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerDetailCell.xib; sourceTree = "<group>"; };
+		43B3D6392450AA9F00482614 /* MainRoomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRoomTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				43B3D61824500E2800482614 /* MainRoomsCollectionView.swift */,
+				43B3D6392450AA9F00482614 /* MainRoomTableView.swift */,
 				43B3D6212450163500482614 /* BuildingSetupViewController.swift */,
 				43B3D62B24501ADC00482614 /* RoomSetupViewController.swift */,
 				43B3D6272450194700482614 /* CustomerSetupViewController.swift */,
@@ -137,6 +144,8 @@
 				43B3D61E245013D000482614 /* StartConfigRoomsCell.xib */,
 				43B3D6232450175E00482614 /* StartConfigCustomerCell.swift */,
 				43B3D6242450175E00482614 /* StartConfigCustomerCell.xib */,
+				43B3D6352450A7C100482614 /* CustomerDetailCell.swift */,
+				43B3D6362450A7C100482614 /* CustomerDetailCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -203,6 +212,7 @@
 				43B3D620245013D000482614 /* StartConfigRoomsCell.xib in Resources */,
 				43B3D605244FFD8300482614 /* Assets.xcassets in Resources */,
 				43B3D603244FFD8200482614 /* Main.storyboard in Resources */,
+				43B3D6382450A7C100482614 /* CustomerDetailCell.xib in Resources */,
 				43B3D6262450175E00482614 /* StartConfigCustomerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,12 +232,14 @@
 				43B3D5FC244FFD8200482614 /* AppDelegate.swift in Sources */,
 				43B3D61B24500F1D00482614 /* MainRoomsCollectionViewCell.swift in Sources */,
 				43B3D63024504BBF00482614 /* WelcomeViewController.swift in Sources */,
+				43B3D6372450A7C100482614 /* CustomerDetailCell.swift in Sources */,
 				43B3D6172450003C00482614 /* Apartment.xcdatamodeld in Sources */,
 				43B3D62A245019AA00482614 /* Constants.swift in Sources */,
 				43B3D632245071A000482614 /* CurrentBuilding.swift in Sources */,
 				43B3D5FE244FFD8200482614 /* SceneDelegate.swift in Sources */,
 				43B3D6252450175E00482614 /* StartConfigCustomerCell.swift in Sources */,
 				43B3D61F245013D000482614 /* StartConfigRoomsCell.swift in Sources */,
+				43B3D63A2450AA9F00482614 /* MainRoomTableView.swift in Sources */,
 				43B3D6282450194700482614 /* CustomerSetupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

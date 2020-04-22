@@ -28,5 +28,7 @@ struct K {
         static let customerConfigReuseCell = "customerReusableCell"
         static let collectionReuseCell = "collectionReuseCell"
         static let roomdetailReuseCell = "roomDetail"
+        static let tableCustomNibName = "CustomerDetailCell"
+        static let customTableReuseCell = "tableDetailCell"
     }
 }

@@ -39,7 +39,8 @@ class RoomSetupViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let predict = NSPredicate(format: "building == %@", CurrentBuilding.building!)
+        guard let building = CurrentBuilding.building else { return }
+        let predict = NSPredicate(format: "building == %@", building)
         let sort = NSSortDescriptor(key: "roomnumber", ascending: true)
         rooms = DataController.taskLoadData(type: Room.self, search: predict, sort: sort)
         print(rooms.count)
