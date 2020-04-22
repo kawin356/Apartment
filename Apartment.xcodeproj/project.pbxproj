@@ -15,13 +15,15 @@
 		43B3D6172450003C00482614 /* Apartment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D6152450003C00482614 /* Apartment.xcdatamodeld */; };
 		43B3D61924500E2800482614 /* MainRoomsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D61824500E2800482614 /* MainRoomsCollectionView.swift */; };
 		43B3D61B24500F1D00482614 /* MainRoomsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D61A24500F1D00482614 /* MainRoomsCollectionViewCell.swift */; };
-		43B3D61F245013D000482614 /* StartConfigRooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D61D245013D000482614 /* StartConfigRooms.swift */; };
-		43B3D620245013D000482614 /* StartConfigRooms.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43B3D61E245013D000482614 /* StartConfigRooms.xib */; };
+		43B3D61F245013D000482614 /* StartConfigRoomsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D61D245013D000482614 /* StartConfigRoomsCell.swift */; };
+		43B3D620245013D000482614 /* StartConfigRoomsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43B3D61E245013D000482614 /* StartConfigRoomsCell.xib */; };
 		43B3D6222450163500482614 /* BuildingSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D6212450163500482614 /* BuildingSetupViewController.swift */; };
 		43B3D6252450175E00482614 /* StartConfigCustomerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D6232450175E00482614 /* StartConfigCustomerCell.swift */; };
 		43B3D6262450175E00482614 /* StartConfigCustomerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43B3D6242450175E00482614 /* StartConfigCustomerCell.xib */; };
 		43B3D6282450194700482614 /* CustomerSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D6272450194700482614 /* CustomerSetupViewController.swift */; };
 		43B3D62A245019AA00482614 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D629245019AA00482614 /* Constants.swift */; };
+		43B3D62C24501ADC00482614 /* RoomSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D62B24501ADC00482614 /* RoomSetupViewController.swift */; };
+		43B3D62E24501FDD00482614 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D62D24501FDD00482614 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,13 +37,15 @@
 		43B3D6162450003C00482614 /* Apartment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Apartment.xcdatamodel; sourceTree = "<group>"; };
 		43B3D61824500E2800482614 /* MainRoomsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRoomsCollectionView.swift; sourceTree = "<group>"; };
 		43B3D61A24500F1D00482614 /* MainRoomsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRoomsCollectionViewCell.swift; sourceTree = "<group>"; };
-		43B3D61D245013D000482614 /* StartConfigRooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartConfigRooms.swift; sourceTree = "<group>"; };
-		43B3D61E245013D000482614 /* StartConfigRooms.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartConfigRooms.xib; sourceTree = "<group>"; };
+		43B3D61D245013D000482614 /* StartConfigRoomsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartConfigRoomsCell.swift; sourceTree = "<group>"; };
+		43B3D61E245013D000482614 /* StartConfigRoomsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartConfigRoomsCell.xib; sourceTree = "<group>"; };
 		43B3D6212450163500482614 /* BuildingSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingSetupViewController.swift; sourceTree = "<group>"; };
 		43B3D6232450175E00482614 /* StartConfigCustomerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartConfigCustomerCell.swift; sourceTree = "<group>"; };
 		43B3D6242450175E00482614 /* StartConfigCustomerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartConfigCustomerCell.xib; sourceTree = "<group>"; };
 		43B3D6272450194700482614 /* CustomerSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerSetupViewController.swift; sourceTree = "<group>"; };
 		43B3D629245019AA00482614 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		43B3D62B24501ADC00482614 /* RoomSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSetupViewController.swift; sourceTree = "<group>"; };
+		43B3D62D24501FDD00482614 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				43B3D6152450003C00482614 /* Apartment.xcdatamodeld */,
+				43B3D62D24501FDD00482614 /* DataController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -107,8 +112,9 @@
 		43B3D611244FFFE900482614 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				43B3D6212450163500482614 /* BuildingSetupViewController.swift */,
 				43B3D61824500E2800482614 /* MainRoomsCollectionView.swift */,
+				43B3D6212450163500482614 /* BuildingSetupViewController.swift */,
+				43B3D62B24501ADC00482614 /* RoomSetupViewController.swift */,
 				43B3D6272450194700482614 /* CustomerSetupViewController.swift */,
 			);
 			path = Controller;
@@ -118,8 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				43B3D61A24500F1D00482614 /* MainRoomsCollectionViewCell.swift */,
-				43B3D61D245013D000482614 /* StartConfigRooms.swift */,
-				43B3D61E245013D000482614 /* StartConfigRooms.xib */,
+				43B3D61D245013D000482614 /* StartConfigRoomsCell.swift */,
+				43B3D61E245013D000482614 /* StartConfigRoomsCell.xib */,
 				43B3D6232450175E00482614 /* StartConfigCustomerCell.swift */,
 				43B3D6242450175E00482614 /* StartConfigCustomerCell.xib */,
 			);
@@ -185,7 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43B3D608244FFD8300482614 /* LaunchScreen.storyboard in Resources */,
-				43B3D620245013D000482614 /* StartConfigRooms.xib in Resources */,
+				43B3D620245013D000482614 /* StartConfigRoomsCell.xib in Resources */,
 				43B3D605244FFD8300482614 /* Assets.xcassets in Resources */,
 				43B3D603244FFD8200482614 /* Main.storyboard in Resources */,
 				43B3D6262450175E00482614 /* StartConfigCustomerCell.xib in Resources */,
@@ -200,6 +206,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				43B3D61924500E2800482614 /* MainRoomsCollectionView.swift in Sources */,
+				43B3D62E24501FDD00482614 /* DataController.swift in Sources */,
+				43B3D62C24501ADC00482614 /* RoomSetupViewController.swift in Sources */,
 				43B3D6222450163500482614 /* BuildingSetupViewController.swift in Sources */,
 				43B3D5FC244FFD8200482614 /* AppDelegate.swift in Sources */,
 				43B3D61B24500F1D00482614 /* MainRoomsCollectionViewCell.swift in Sources */,
@@ -207,7 +215,7 @@
 				43B3D62A245019AA00482614 /* Constants.swift in Sources */,
 				43B3D5FE244FFD8200482614 /* SceneDelegate.swift in Sources */,
 				43B3D6252450175E00482614 /* StartConfigCustomerCell.swift in Sources */,
-				43B3D61F245013D000482614 /* StartConfigRooms.swift in Sources */,
+				43B3D61F245013D000482614 /* StartConfigRoomsCell.swift in Sources */,
 				43B3D6282450194700482614 /* CustomerSetupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

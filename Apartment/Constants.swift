@@ -14,6 +14,9 @@ struct K {
     }
     
     struct ReuseCell {
+        static let roomcellNibName = "StartConfigRoomsCell"
         static let roomConfigReuseCell = "roomReusableCell"
+        static let customercellNibName = "StartConfigCustomerCell"
+        static let customerConfigReuseCell = "customerReusableCell"
     }
 }

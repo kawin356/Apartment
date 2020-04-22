@@ -326,10 +326,10 @@
             </objects>
             <point key="canvasLocation" x="943" y="-1331"/>
         </scene>
-        <!--View Controller-->
+        <!--Room Setup View Controller-->
         <scene sceneID="2qv-T9-T0T">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="A4a-8A-HeY" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="A4a-8A-HeY" customClass="RoomSetupViewController" customModule="Apartment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZjK-oG-L2M">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -359,15 +359,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="l5V-Ne-2H6" id="HI6-bq-zmD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PEp-om-NtS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1713" y="-1331"/>
         </scene>
-        <!--View Controller-->
+        <!--Customer Setup View Controller-->
         <scene sceneID="rpu-Rb-kB3">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="zkv-xl-OFe" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="zkv-xl-OFe" customClass="CustomerSetupViewController" customModule="Apartment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hI4-Is-oui">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -406,6 +409,9 @@
                         <viewLayoutGuide key="safeArea" id="nM4-cL-iN8"/>
                     </view>
                     <navigationItem key="navigationItem" id="JvE-mF-c8S"/>
+                    <connections>
+                        <outlet property="tableView" destination="kkq-eV-vYn" id="bSD-kX-0vV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2LX-jI-XSQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StartConfigRooms: UITableViewCell {
+class StartConfigRoomsCell: UITableViewCell {
     @IBOutlet weak var roomNumberTextField: UITextField!
     @IBOutlet weak var haveFurnitureSwitch: UISwitch!
     @IBOutlet weak var haveAirconditionSwitch: UISwitch!
