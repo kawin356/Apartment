@@ -20,6 +20,9 @@ class CustomerSetupViewController: UIViewController {
         super.viewDidLoad()
         tableView.register(UINib(nibName: K.ReuseCell.customercellNibName, bundle: nil), forCellReuseIdentifier: K.ReuseCell.customerConfigReuseCell)
         
+        let predict = NSPredicate(format: "building == %@", building)
+        rooms = DataController.taskLoadData(type: Room.self, search: predict)
+        
 //        let fetchRequest:NSFetchRequest<Room> = Room.fetchRequest()
 //        let predict = NSPredicate(format: "building == %@", building)
 //        fetchRequest.predicate = predict
@@ -48,16 +51,15 @@ class CustomerSetupViewController: UIViewController {
         let count = tableView.numberOfRows(inSection: 0)
         
         if checkNull() {
-            for selectedRow in 0...count-1 {
-                let indexPath = IndexPath(row: selectedRow, section: 0)
-                let row = tableView.cellForRow(at: indexPath) as! StartConfigCustomerCell
-                let customer = Customer(context: DataController.shared.viewContext)
-                customer.name = row.nameTextField.text
-                customer.room = rooms[indexPath.row]
-                customer.telephone = row.telephoneTextField.text
-                DataController.saveContext()
-            }
-            
+//            for selectedRow in 0...count-1 {
+//                let indexPath = IndexPath(row: selectedRow, section: 0)
+//                let row = tableView.cellForRow(at: indexPath) as! StartConfigCustomerCell
+//                let customer = Customer(context: DataController.shared.viewContext)
+//                customer.name = row.nameTextField.text
+//                customer.room = rooms[indexPath.row]
+//                customer.telephone = row.telephoneTextField.text
+//                DataController.saveContext()
+//            }
         }
     }
     
@@ -70,6 +72,12 @@ class CustomerSetupViewController: UIViewController {
                 if row.nameTextField.text == "" || row.telephoneTextField.text == "" {
                     print("Please fill all rooms")
                     return false
+                } else {
+                    let customer = Customer(context: DataController.shared.viewContext)
+                    customer.name = row.nameTextField.text
+                    customer.room = rooms[indexPath.row]
+                    customer.telephone = row.telephoneTextField.text
+                    DataController.saveContext()
                 }
             }
         }
@@ -93,5 +101,6 @@ extension CustomerSetupViewController: UITableViewDelegate, UITableViewDataSourc
         return cell
     }
     
+   
     
 }

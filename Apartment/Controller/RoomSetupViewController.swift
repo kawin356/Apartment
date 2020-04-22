@@ -64,7 +64,6 @@ class RoomSetupViewController: UIViewController {
     
     func checkNull() -> Bool {
         let count = tableView.numberOfRows(inSection: 0)
-        
         for selectedRow in 0...count-1 {
             let indexPath = IndexPath(row: selectedRow, section: 0)
             let row = tableView.cellForRow(at: indexPath) as! StartConfigRoomsCell
@@ -99,4 +98,11 @@ extension RoomSetupViewController: UITableViewDelegate, UITableViewDataSource {
         cell.roomCostTextField.text = String(indexPath.row * 1000)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+           print("Edit")
+       }
+       func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+           print("finishEdit")
+       }
 }

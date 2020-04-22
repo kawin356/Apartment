@@ -25,6 +25,7 @@
 		43B3D62C24501ADC00482614 /* RoomSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D62B24501ADC00482614 /* RoomSetupViewController.swift */; };
 		43B3D62E24501FDD00482614 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D62D24501FDD00482614 /* DataController.swift */; };
 		43B3D63024504BBF00482614 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D62F24504BBF00482614 /* WelcomeViewController.swift */; };
+		43B3D632245071A000482614 /* CurrentBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D631245071A000482614 /* CurrentBuilding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		43B3D62B24501ADC00482614 /* RoomSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSetupViewController.swift; sourceTree = "<group>"; };
 		43B3D62D24501FDD00482614 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		43B3D62F24504BBF00482614 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		43B3D631245071A000482614 /* CurrentBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentBuilding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				43B3D6152450003C00482614 /* Apartment.xcdatamodeld */,
 				43B3D62D24501FDD00482614 /* DataController.swift */,
+				43B3D631245071A000482614 /* CurrentBuilding.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				43B3D63024504BBF00482614 /* WelcomeViewController.swift in Sources */,
 				43B3D6172450003C00482614 /* Apartment.xcdatamodeld in Sources */,
 				43B3D62A245019AA00482614 /* Constants.swift in Sources */,
+				43B3D632245071A000482614 /* CurrentBuilding.swift in Sources */,
 				43B3D5FE244FFD8200482614 /* SceneDelegate.swift in Sources */,
 				43B3D6252450175E00482614 /* StartConfigCustomerCell.swift in Sources */,
 				43B3D61F245013D000482614 /* StartConfigRoomsCell.swift in Sources */,

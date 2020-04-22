@@ -43,20 +43,26 @@ class DataController {
         }
     }
     
-    class func taskLoadData<T: NSManagedObject>(type: T.Type) -> [T] {
+    class func taskLoadData<T: NSManagedObject>(type: T.Type, search: NSPredicate?) -> [T] {
         
         let context = DataController.shared.viewContext
-           let request = T.fetchRequest()
-           do
-           {
-               let results = try context.fetch(request)
+        
+        let request = T.fetchRequest()
+        
+        if let predicate = search {
+            request.predicate = predicate
+        }
+        
+        do
+        {
+            let results = try context.fetch(request)
             return results as! [T]
-           }
-           catch
-           {
-               print("Error with request: \(error)")
-              return []
-           }
+        }
+        catch
+        {
+            print("Error with request: \(error)")
+            return []
+        }
     }
 }
 

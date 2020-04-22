@@ -20,11 +20,12 @@ class WelcomeViewController: UIViewController {
     }
     
     func checkAlreadyCreateBuilding() {
-        let building = DataController.taskLoadData(type: Building.self)
+        let building = DataController.taskLoadData(type: Building.self, search: nil)
         
         if building.count == 0 {
             print("Go To Create")
         } else {
+            CurrentBuilding.building = building[0]
             self.performSegue(withIdentifier: K.Segue.toMain, sender: nil)
         }
     }
