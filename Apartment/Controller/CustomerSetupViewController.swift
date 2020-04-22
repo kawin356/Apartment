@@ -37,8 +37,9 @@ class CustomerSetupViewController: UIViewController {
         saveAllRoomSetup()
         
         let viewController = UIStoryboard(name: K.StoryboardID.main, bundle: nil).instantiateViewController(withIdentifier: K.StoryboardID.tabbarMain)
-        
-        present(viewController, animated: true)
+        let sceneDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+        let window = sceneDelegate.window
+        window?.rootViewController = viewController
         
     }
     

@@ -22,18 +22,18 @@ class RoomSetupViewController: UIViewController {
         tableView.register(UINib(nibName: K.ReuseCell.roomcellNibName, bundle: nil), forCellReuseIdentifier: K.ReuseCell.roomConfigReuseCell)
         
         let fetchRequest:NSFetchRequest<Building> = Building.fetchRequest()
-               
-               do {
-                   buil = try DataController.shared.viewContext.fetch(fetchRequest)
-                if let bu = buil {
-                    for b in bu {
-                        print(b.name)
-                     }
+        
+        do {
+            buil = try DataController.shared.viewContext.fetch(fetchRequest)
+            if let bu = buil {
+                for b in bu {
+                    print(b.name)
                 }
-                    } catch let error as NSError {
-                      print("Could not fetch. \(error), \(error.userInfo)")
+            }
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
         }
-                
+        
                 
     }
     

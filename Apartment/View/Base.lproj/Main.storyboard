@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Apartment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="Apartment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,6 +31,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="cHy-OW-kRv" kind="presentation" identifier="goToMain" id="ndA-OU-u9c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -62,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gzf-en-8fQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1236" y="989"/>
+            <point key="canvasLocation" x="2246" y="1057"/>
         </scene>
         <!--Item-->
         <scene sceneID="sV6-Lv-f99">
@@ -90,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUZ-t5-OUs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2070" y="802"/>
+            <point key="canvasLocation" x="3035" y="1041"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="EWj-1b-o1X">
@@ -118,7 +121,7 @@
                     <tabBarItem key="tabBarItem" title="Item 2" id="toI-1N-nBm"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="2071" y="156"/>
+            <point key="canvasLocation" x="3036" y="357"/>
         </scene>
         <!--Main Rooms Collection View-->
         <scene sceneID="Kjf-9e-Bgv">
@@ -139,21 +142,24 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="m9s-dC-I7E" customClass="MainRoomsCollectionViewCell" customModule="Apartment" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionReuseCell" id="m9s-dC-I7E" customClass="MainRoomsCollectionViewCell" customModule="Apartment" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TR2-Nf-AsI">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2K-oV-oct">
-                                                    <rect key="frame" x="43" y="54" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2K-oV-oct">
+                                                    <rect key="frame" x="43" y="53.5" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="f2K-oV-oct" firstAttribute="centerY" secondItem="TR2-Nf-AsI" secondAttribute="centerY" id="5Rq-XV-Mih"/>
+                                                <constraint firstItem="f2K-oV-oct" firstAttribute="centerX" secondItem="TR2-Nf-AsI" secondAttribute="centerX" id="BY3-Uo-l6G"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
                                             <outlet property="textRoom" destination="f2K-oV-oct" id="iee-xt-9rj"/>
@@ -178,12 +184,13 @@
                     <navigationItem key="navigationItem" id="USU-PY-rL2"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="3889.8550724637685" y="-520.3125"/>
+            <point key="canvasLocation" x="2523" y="-500"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gyn-5K-kgx">
             <objects>
-                <tabBarController storyboardIdentifier="tabbarMain" id="cHy-OW-kRv" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabbarMain" modalPresentationStyle="fullScreen" id="cHy-OW-kRv" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jKO-VY-Q7m"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a5A-KF-bVj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -501,7 +508,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B2q-Mu-TXX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2979.7101449275365" y="-520.3125"/>
+            <point key="canvasLocation" x="1712" y="-500"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FgW-Rm-ndg">

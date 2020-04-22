@@ -17,6 +17,7 @@ struct K {
     struct Segue {
         static let roomSetup = "goToRoomSetup"
         static let customerSetup = "goToCustomerSetup"
+        static let toMain = "goToMain"
     }
     
     struct ReuseCell {
@@ -24,5 +25,6 @@ struct K {
         static let roomConfigReuseCell = "roomReusableCell"
         static let customercellNibName = "StartConfigCustomerCell"
         static let customerConfigReuseCell = "customerReusableCell"
+        static let collectionReuseCell = "collectionReuseCell"
     }
 }

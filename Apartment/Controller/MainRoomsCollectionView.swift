@@ -19,11 +19,14 @@ extension MainRoomsCollectionView: UICollectionViewDelegate, UICollectionViewDat
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.ReuseCell.collectionReuseCell, for: indexPath) as! MainRoomsCollectionViewCell
+        cell.textRoom.text = String(indexPath.row)
+        
+        return cell
     }
     
     

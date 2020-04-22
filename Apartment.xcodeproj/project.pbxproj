@@ -24,6 +24,7 @@
 		43B3D62A245019AA00482614 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D629245019AA00482614 /* Constants.swift */; };
 		43B3D62C24501ADC00482614 /* RoomSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D62B24501ADC00482614 /* RoomSetupViewController.swift */; };
 		43B3D62E24501FDD00482614 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D62D24501FDD00482614 /* DataController.swift */; };
+		43B3D63024504BBF00482614 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D62F24504BBF00482614 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		43B3D629245019AA00482614 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		43B3D62B24501ADC00482614 /* RoomSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSetupViewController.swift; sourceTree = "<group>"; };
 		43B3D62D24501FDD00482614 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		43B3D62F24504BBF00482614 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				43B3D6212450163500482614 /* BuildingSetupViewController.swift */,
 				43B3D62B24501ADC00482614 /* RoomSetupViewController.swift */,
 				43B3D6272450194700482614 /* CustomerSetupViewController.swift */,
+				43B3D62F24504BBF00482614 /* WelcomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				43B3D6222450163500482614 /* BuildingSetupViewController.swift in Sources */,
 				43B3D5FC244FFD8200482614 /* AppDelegate.swift in Sources */,
 				43B3D61B24500F1D00482614 /* MainRoomsCollectionViewCell.swift in Sources */,
+				43B3D63024504BBF00482614 /* WelcomeViewController.swift in Sources */,
 				43B3D6172450003C00482614 /* Apartment.xcdatamodeld in Sources */,
 				43B3D62A245019AA00482614 /* Constants.swift in Sources */,
 				43B3D5FE244FFD8200482614 /* SceneDelegate.swift in Sources */,
