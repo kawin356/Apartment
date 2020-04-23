@@ -25,7 +25,9 @@ class SetBillRoomViewController: UIViewController {
         bills = DataController.taskLoadData(type: Bill.self, search: predict, sort: nil)
         
         for bill in bills {
-            print(bill.room)
+            print(bill.room?.roomnumber)
+            print(bill.unitelec)
+            print(bill.unitwater)
         }
     }
     
@@ -44,6 +46,8 @@ class SetBillRoomViewController: UIViewController {
         if let water = Int(row.newWaterTextField.text ?? "0.0") {
             bill.unitwater = Double(exactly: water)!
         }
+        
+        DataController.saveContext()
     }
 }
 
@@ -71,6 +75,9 @@ extension SetBillRoomViewController: UITableViewDelegate, UITableViewDataSource 
         if let name = lastBill.customer?.name {
             cell.customerNameLabel.text = name
         }
+        
+        cell.oldWaterTextField.text = String(lastBill.unitwater)
+        cell.oldElecTextField.text = String(lastBill.unitelec)
         
         return cell
     }

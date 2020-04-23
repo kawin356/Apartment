@@ -118,12 +118,12 @@ class RoomSetupViewController: UIViewController {
             viewController.building = building
         }
         
-        if segue.identifier == K.Segue.toSettingRoomAndCustomer {
-            let viewController = segue.destination as! RoomAndCustomerSetupViewController
-            if let indexPath = tableView.indexPathForSelectedRow {
-                //viewController.room = tableView.row
-            }
-        }
+//        if segue.identifier == K.Segue.toSettingRoomAndCustomer {
+//            let viewController = segue.destination as! RoomAndCustomerSetupViewController
+//            if let indexPath = tableView.indexPathForSelectedRow {
+//                //viewController.room = tableView.row
+//            }
+//        }
     }
 }
 

@@ -81,11 +81,11 @@ extension BillViewController: UITableViewDataSource, UITableViewDelegate {
         if rooms.count > indexPath.row,let roomnumber = rooms[indexPath.row].roomnumber {
             cell.textLabel?.text = roomnumber
             cell.detailTextLabel?.text = "Complete"
-            cell.backgroundColor = .green
+            //cell.backgroundColor = .green
         } else {
             cell.textLabel?.text = String(indexPath.row)
             cell.detailTextLabel?.text = "Need information"
-            cell.backgroundColor = .red
+            //cell.backgroundColor = .red
         }
         
         return cell
