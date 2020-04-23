@@ -102,8 +102,15 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Gqb-6E-hWN" kind="show" identifier="goToSetupBill" id="Uie-oZ-Fx5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="WD8-kz-vdi" id="f8A-Gk-0hm"/>
+                                    <outlet property="delegate" destination="WD8-kz-vdi" id="hwh-K6-4eE"/>
+                                </connections>
                             </tableView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HSV-hm-1f7">
                                 <rect key="frame" x="0.0" y="88" width="414" height="100"/>
@@ -137,12 +144,53 @@
                     </navigationItem>
                     <connections>
                         <outlet property="datePicker" destination="HSV-hm-1f7" id="YPp-VL-Y3l"/>
-                        <outlet property="tableVIew" destination="Zeq-lF-mKV" id="F8n-0h-i86"/>
+                        <outlet property="tableView" destination="Zeq-lF-mKV" id="F8n-0h-i86"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUZ-t5-OUs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2839.130434782609" y="957.58928571428567"/>
+        </scene>
+        <!--Set Bill Room View Controller-->
+        <scene sceneID="9mN-YK-mOk">
+            <objects>
+                <viewController id="Gqb-6E-hWN" customClass="SetBillRoomViewController" customModule="Apartment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QGN-uE-ZyL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="faf-ue-RRe">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Gqb-6E-hWN" id="sQu-he-gbh"/>
+                                    <outlet property="delegate" destination="Gqb-6E-hWN" id="iGC-oj-XeX"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="faf-ue-RRe" firstAttribute="top" secondItem="9rM-Hn-LcE" secondAttribute="top" id="If4-4X-uSU"/>
+                            <constraint firstItem="faf-ue-RRe" firstAttribute="leading" secondItem="9rM-Hn-LcE" secondAttribute="leading" id="Iz7-TG-iLL"/>
+                            <constraint firstItem="9rM-Hn-LcE" firstAttribute="trailing" secondItem="faf-ue-RRe" secondAttribute="trailing" id="b6W-wm-VdV"/>
+                            <constraint firstItem="9rM-Hn-LcE" firstAttribute="bottom" secondItem="faf-ue-RRe" secondAttribute="bottom" id="ey7-CE-yI4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9rM-Hn-LcE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lIf-qy-qPT">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="24g-4M-qIQ">
+                            <connections>
+                                <action selector="saveBarButtonPressed:" destination="Gqb-6E-hWN" id="8Pb-BY-STN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="faf-ue-RRe" id="m5C-Bi-oJ6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2lr-sn-J8A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3552" y="957"/>
         </scene>
         <!--Main Room Table View-->
         <scene sceneID="EWj-1b-o1X">

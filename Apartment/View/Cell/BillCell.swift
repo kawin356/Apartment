@@ -10,6 +10,7 @@ import UIKit
 
 class BillCell: UITableViewCell {
 
+    @IBOutlet weak var roomNumberLabel: UILabel!
     @IBOutlet weak var oldWaterTextField: UITextField!
     @IBOutlet weak var oldElecTextField: UITextField!
     @IBOutlet weak var newWaterTextField: UITextField!

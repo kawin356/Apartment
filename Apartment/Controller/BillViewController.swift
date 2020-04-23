@@ -11,24 +11,27 @@ import UIKit
 class BillViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIPickerView!
-    @IBOutlet weak var tableVIew: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     
     var rooms: [Room] = []
     var customers: [Customer] = []
     var bills: [Bill] = []
     
+    
     var monthBill: [String] = []
+    var dateAll: [Date] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //DataController.taskDeleteAllEntity(type: Bill.self)
-        
-        
+//        DataController.taskDeleteAllEntity(type: Bill.self)
+//        DataController.saveContext()
+//        
         guard let building = CurrentBuilding.building else { return }
         let predict = NSPredicate(format: "building == %@", building)
         let sort = NSSortDescriptor(key: "roomnumber", ascending: true)
         rooms = DataController.taskLoadData(type: Room.self, search: predict, sort: sort)
+        
         
     }
     
@@ -36,6 +39,7 @@ class BillViewController: UIViewController {
         createBill()
         // goto set water and elec
         datePicker.reloadAllComponents()
+        tableView.reloadData()
     }
     
     func createBill() {
@@ -53,13 +57,22 @@ class BillViewController: UIViewController {
             DataController.saveContext()
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.Segue.toSetupBill {
+            let viewController = segue.destination as! SetBillRoomViewController
+            if let indexPath = tableView.indexPathForSelectedRow {
+                viewController.room = rooms[indexPath.row]
+            }
+        }
+    }
 }
 
 extension BillViewController: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return rooms.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -98,10 +111,10 @@ extension BillViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         for billdate in bills {
             date.append(billdate.date ?? Date())
         }
-        let dateAll = Array(Set(date))
+        dateAll = Array(Set(date))
         for month in dateAll {
             let formatter = DateFormatter()
-            formatter.dateFormat = "MMMM.yyyy"
+            formatter.dateFormat = "MMMM yyyy"
             monthBill.append(formatter.string(from: month))
         }
         monthBill = Array(Set(monthBill))
@@ -109,10 +122,16 @@ extension BillViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        //let date = Date()
         return monthBill[row]
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print(dateAll.count)
+        for date in dateAll {
+            print(date)
+        }
+        print(dateAll[row])
+    }
     
 }
 

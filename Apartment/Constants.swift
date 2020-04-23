@@ -19,6 +19,7 @@ struct K {
         static let customerSetup = "goToCustomerSetup"
         static let toMain = "goToMain"
         static let toSettingRoomAndCustomer = "settingRoomAndCustomer"
+        static let toSetupBill = "goToSetupBill"
     }
     
     struct ReuseCell {
@@ -31,5 +32,6 @@ struct K {
         static let tableCustomNibName = "CustomerDetailCell"
         static let customTableReuseCell = "tableDetailCell"
         static let billTableReuseCell = "billrRUseCell"
+        static let billWaterElecCell = "BillCell"
     }
 }

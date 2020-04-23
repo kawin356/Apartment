@@ -10,6 +10,7 @@
 		43153D022451565900066D5F /* BillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43153D002451565900066D5F /* BillCell.swift */; };
 		43153D032451565900066D5F /* BillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43153D012451565900066D5F /* BillCell.xib */; };
 		43153D0524515CAB00066D5F /* BillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43153D0424515CAB00066D5F /* BillViewController.swift */; };
+		43556C872451BFE20002F9B0 /* SetBillRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43556C862451BFE20002F9B0 /* SetBillRoomViewController.swift */; };
 		43B3D5FC244FFD8200482614 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D5FB244FFD8200482614 /* AppDelegate.swift */; };
 		43B3D5FE244FFD8200482614 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D5FD244FFD8200482614 /* SceneDelegate.swift */; };
 		43B3D603244FFD8200482614 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B3D601244FFD8200482614 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		43153D002451565900066D5F /* BillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillCell.swift; sourceTree = "<group>"; };
 		43153D012451565900066D5F /* BillCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillCell.xib; sourceTree = "<group>"; };
 		43153D0424515CAB00066D5F /* BillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillViewController.swift; sourceTree = "<group>"; };
+		43556C862451BFE20002F9B0 /* SetBillRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBillRoomViewController.swift; sourceTree = "<group>"; };
 		43B3D5F8244FFD8200482614 /* Apartment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Apartment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B3D5FB244FFD8200482614 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43B3D5FD244FFD8200482614 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				43B3D62F24504BBF00482614 /* WelcomeViewController.swift */,
 				43B3D63324508C8F00482614 /* RoomAndCustomerSetupViewController.swift */,
 				43153D0424515CAB00066D5F /* BillViewController.swift */,
+				43556C862451BFE20002F9B0 /* SetBillRoomViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				43153D022451565900066D5F /* BillCell.swift in Sources */,
 				43B3D61B24500F1D00482614 /* MainRoomsCollectionViewCell.swift in Sources */,
 				43153D0524515CAB00066D5F /* BillViewController.swift in Sources */,
+				43556C872451BFE20002F9B0 /* SetBillRoomViewController.swift in Sources */,
 				43B3D63024504BBF00482614 /* WelcomeViewController.swift in Sources */,
 				43B3D6372450A7C100482614 /* CustomerDetailCell.swift in Sources */,
 				43B3D6172450003C00482614 /* Apartment.xcdatamodeld in Sources */,
