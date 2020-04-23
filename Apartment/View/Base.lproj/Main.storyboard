@@ -79,7 +79,7 @@
                                 <rect key="frame" x="0.0" y="188" width="414" height="625"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="l3g-KW-sYA" detailTextLabel="dmJ-WJ-ufO" style="IBUITableViewCellStyleValue1" id="OMd-W0-Lem">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="billrRUseCell" textLabel="l3g-KW-sYA" detailTextLabel="dmJ-WJ-ufO" style="IBUITableViewCellStyleValue1" id="OMd-W0-Lem">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OMd-W0-Lem" id="Uxl-SI-ESh">
@@ -105,28 +105,38 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="IUo-mn-LVM">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HSV-hm-1f7">
                                 <rect key="frame" x="0.0" y="88" width="414" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="1Ad-uc-N2g"/>
+                                    <constraint firstAttribute="height" constant="100" id="tsN-0I-LqC"/>
                                 </constraints>
-                            </datePicker>
+                                <connections>
+                                    <outlet property="dataSource" destination="WD8-kz-vdi" id="RL3-Jw-Fyq"/>
+                                    <outlet property="delegate" destination="WD8-kz-vdi" id="D6z-bk-tND"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="IUo-mn-LVM" firstAttribute="top" secondItem="Dn9-It-M9Q" secondAttribute="top" id="3Qc-2R-wCa"/>
-                            <constraint firstItem="IUo-mn-LVM" firstAttribute="trailing" secondItem="Dn9-It-M9Q" secondAttribute="trailing" id="7ku-si-QPi"/>
                             <constraint firstItem="Zeq-lF-mKV" firstAttribute="leading" secondItem="Dn9-It-M9Q" secondAttribute="leading" id="CYx-VV-tG6"/>
-                            <constraint firstItem="IUo-mn-LVM" firstAttribute="leading" secondItem="Dn9-It-M9Q" secondAttribute="leading" id="JzR-IM-3jM"/>
-                            <constraint firstItem="Zeq-lF-mKV" firstAttribute="top" secondItem="IUo-mn-LVM" secondAttribute="bottom" id="gge-BF-Odf"/>
+                            <constraint firstItem="Zeq-lF-mKV" firstAttribute="top" secondItem="HSV-hm-1f7" secondAttribute="bottom" id="Frx-kN-lhN"/>
+                            <constraint firstItem="HSV-hm-1f7" firstAttribute="leading" secondItem="Dn9-It-M9Q" secondAttribute="leading" id="XKs-ka-xnB"/>
                             <constraint firstItem="Dn9-It-M9Q" firstAttribute="bottom" secondItem="Zeq-lF-mKV" secondAttribute="bottom" id="sMt-rh-DXh"/>
                             <constraint firstItem="Dn9-It-M9Q" firstAttribute="trailing" secondItem="Zeq-lF-mKV" secondAttribute="trailing" id="tPw-xK-9vP"/>
+                            <constraint firstItem="HSV-hm-1f7" firstAttribute="top" secondItem="Dn9-It-M9Q" secondAttribute="top" id="y9o-wH-Q1m"/>
+                            <constraint firstItem="HSV-hm-1f7" firstAttribute="trailing" secondItem="Dn9-It-M9Q" secondAttribute="trailing" id="yML-SD-AGg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dn9-It-M9Q"/>
                     </view>
-                    <navigationItem key="navigationItem" id="p31-le-FqI"/>
+                    <navigationItem key="navigationItem" id="p31-le-FqI">
+                        <barButtonItem key="rightBarButtonItem" title="Create new Bill" id="A1m-Ak-nyz">
+                            <connections>
+                                <action selector="createNewBillBarButtonPressed:" destination="WD8-kz-vdi" id="vXz-5f-0Te"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="DatePicker" destination="IUo-mn-LVM" id="zxd-5l-nOw"/>
+                        <outlet property="datePicker" destination="HSV-hm-1f7" id="YPp-VL-Y3l"/>
                         <outlet property="tableVIew" destination="Zeq-lF-mKV" id="F8n-0h-i86"/>
                     </connections>
                 </viewController>

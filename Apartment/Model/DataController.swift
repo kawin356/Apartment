@@ -54,6 +54,22 @@ class DataController {
         }
     }
     
+    class func taskDeleteAllEntity<T: NSManagedObject>(type: T.Type) {
+        let context = DataController.shared.viewContext
+        
+        let request = T.fetchRequest()
+        
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: request)
+        
+        do {
+            try context.execute(deleteRequest)
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+    }
+    
+    
+    
     class func taskLoadData<T: NSManagedObject>(type: T.Type, search: NSPredicate?, sort: NSSortDescriptor?) -> [T] {
         
         let context = DataController.shared.viewContext
