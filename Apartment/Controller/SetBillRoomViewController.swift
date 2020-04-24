@@ -13,6 +13,7 @@ class SetBillRoomViewController: UIViewController {
     var bills: [Bill] = []
     var lastBill: Bill!
     var room: Room!
+    var month: String!
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -25,10 +26,18 @@ class SetBillRoomViewController: UIViewController {
         bills = DataController.taskLoadData(type: Bill.self, search: predict, sort: nil)
         
         for bill in bills {
-            print(bill.room?.roomnumber)
-            print(bill.unitelec)
-            print(bill.unitwater)
+            if bill.date == month {
+                lastBill = bill
+            }
         }
+    }
+    
+    func getMonth() -> String {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM yyyy"
+        let monthCreate = formatter.string(from: date)
+        return monthCreate
     }
     
     @IBAction func saveBarButtonPressed(_ sender: UIBarButtonItem) {
@@ -37,7 +46,7 @@ class SetBillRoomViewController: UIViewController {
         let row = tableView.cellForRow(at: indexPath) as! BillCell
         let bill = Bill(context: DataController.shared.viewContext)
         bill.customer = lastBill.customer
-        bill.date = Date()
+        bill.date = getMonth()
         bill.room = room
         bill.haveinternet = row.haveInternetSwitch.isOn
         if let elec = Int(row.newElecTextField.text ?? "0.0") {
@@ -64,7 +73,7 @@ extension SetBillRoomViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.ReuseCell.billWaterElecCell, for: indexPath) as! BillCell
-        lastBill = bills[bills.count-1]
+        //lastBill = bills[bills.count-1]
         
         if let roomCost = lastBill.room?.roomcost {
             cell.roomCostLabel.text = "Room Cost: \(roomCost) THB/Month"

@@ -42,23 +42,21 @@
         <!--Item-->
         <scene sceneID="Anv-EL-5JS">
             <objects>
-                <viewController id="bvg-ar-Vxy" sceneMemberID="viewController">
+                <viewController id="bvg-ar-Vxy" customClass="SettingViewController" customModule="Apartment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kWs-zV-iSK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserDetail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Xh-LI-mZM">
-                                <rect key="frame" x="167" y="418" width="80" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yld-hZ-Pjh">
+                                <rect key="frame" x="153" y="140" width="108" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Remove All Bills"/>
+                                <connections>
+                                    <action selector="removeAllBillsBottonPressed:" destination="bvg-ar-Vxy" eventType="touchUpInside" id="NML-9P-jBR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="0Xh-LI-mZM" firstAttribute="centerX" secondItem="SGn-BJ-WEC" secondAttribute="centerX" id="Zgs-jS-SEK"/>
-                            <constraint firstItem="0Xh-LI-mZM" firstAttribute="centerY" secondItem="SGn-BJ-WEC" secondAttribute="centerY" id="bLf-gK-mnc"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SGn-BJ-WEC"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="X0A-Pj-pbl"/>
